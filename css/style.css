@@ -28,8 +28,8 @@
     grid-area: header;
     display: grid;
     grid-template-areas:
-        "titre search shop";
-    grid-template-columns: 4fr 1fr 1fr;
+        "titre search shop";                                     /*MAJ  ajouter profil entre search et shop*/                    
+    grid-template-columns: 4fr 1fr 1fr;                          /*MAJ 1fr */
     border-bottom: 1px solid gray;
 }
 #titre{
@@ -39,12 +39,24 @@
     font-size: 250%;
     cursor: pointer;
     border: 2px solid #ffffff00;
-
 }
 #searchInput{
     grid-area: search;
     margin: auto;
     font-size: 150%;
+}
+#profil{                                                        /*MAJ*/
+    grid-area: profil;
+    border: solid 1px #dedede;
+    cursor: pointer;
+    background-image: url(../img/pdp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto 50% auto 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 #shop{
     grid-area: shop;
