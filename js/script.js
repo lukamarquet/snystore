@@ -178,7 +178,7 @@ function loadDatapullover(list) {
         }
     });
 }
-
+//lukamarquet
 function loadDatatshirt(list) {
     let articleList = document.querySelector(".wrapper"); 
     list.forEach(article => {
