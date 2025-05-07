@@ -1,0 +1,382 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        "solde solde"
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 0.75fr 3fr;
+    grid-template-rows: min-content 10% auto 10%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+.containe {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+        "titre search shop";
+    grid-template-columns: 4fr 1fr 1fr;
+    border-bottom: 1px solid gray;
+}
+#titre{
+    margin: auto auto auto 5%;
+    font-family: fantasy;
+    grid-area: titre;
+    font-size: 250%;
+    cursor: pointer;
+    border: 2px solid #ffffff00;
+
+}
+#searchInput{
+    grid-area: search;
+    margin: auto;
+    font-size: 150%;
+}
+#shop{
+    grid-area: shop;
+    background: none;
+    border: none;
+    margin: auto;
+    font-size: 200%;
+    cursor: pointer;
+}
+#shop:hover{
+    /* il faudrait retrecir l'element */
+    background-color: #dededece;
+    border-radius: 10%;
+}
+.menu {
+    grid-area: menu;
+    height: auto;
+    border-right: 1px solid rgb(201, 201, 201);
+}
+.ecrit{
+    margin: 2.5cap 0  0 1.5cap;
+}
+.menu a {
+    margin: 5%;
+    line-height: 350%;
+    text-decoration: none;
+    color: grey;
+    font-family:'Trebuchet MS';
+    border: 2px solid #dedede00;
+}
+.menu a:hover{
+    background-color: #dededece;
+    border-radius: 5px;
+    border: 2px solid #dededece;
+}
+.content {
+    grid-area: content;
+    margin: 2.5% 5% 1% 5%;
+    height: max-content;
+}
+.article{
+    border: 1px solid gray;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5% 1% 5% 1%;
+    width: 100%;
+    height: 100%;
+}
+.article:hover{
+    background-color: #434343;
+    color: #ddd;
+}
+.write{
+    margin: 10%;
+}
+#h2content{
+    margin-top: 0;
+    margin-bottom: 1.5%;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+.footer {
+    grid-area: footer;
+    margin: 5%;
+    text-align: center;
+}
+.solde {
+    grid-area: solde;
+    display: flex;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    overflow: hidden;
+    position: relative;
+} 
+.marquee {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+    height: 100%;
+} 
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: defilement 20s linear infinite;
+}
+.marquee-content span {
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+@keyframes defilement {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+}
+.solde button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.solde button:hover{
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.297);
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+  
+.popup {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 600px;
+    position: relative;
+}
+  
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.popup-content {
+    display: flex;
+    gap: 1rem;
+}
+  
+.popup-content  .img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+  
+.popup-info {
+    flex: 1;
+}
+  
+.popup-info h2 {
+    margin-top: 0;
+}
+  
+.popup-info button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.taille{
+    cursor: default;
+}
+.taille button{
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    border: 2px solid #434343;
+}
+.taille button:hover{
+    background-color: #434343;
+    color: white;
+}
+.taille butto{
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #434343;
+}
+
+.achat-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+.achat-header {
+    display: grid;
+    grid-template-columns: 50px 2fr 2fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.achat-header {
+    font-weight: bold;
+    color: gray;
+    font-size: 14px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+#true{
+    color: rgb(32, 209, 32);
+}
+#false{
+    color: red;
+}
+#barre{
+    color: red;
+}
+#streetwearcollection{
+    background-image: url(../img/Jorts_by_culture_city.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    color:#ddd;
+    display: flex;
+    align-items: flex-end;
+    height: 250%;
+}
+#streetwearcollection:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/Jorts_by_culture_city.jpg);
+    color: white;
+}
+
+#neuillecollection{
+    background-image: url(../img/neuille.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    color:#ddd;
+    display: flex;
+    align-items: flex-end;
+    height: 250%;
+}
+#neuillecollection:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/neuille.jpg);
+    color: white;
+}
+#sapologiecollection{
+    background-image: url(../img/sapologie.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    color:#ddd;
+    display: flex;
+    align-items: flex-end;
+    height: 250%;
+}
+#sapologiecollection:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/sapologie.jpg);
+    color: white;
+}
+.news{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/fete2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+    border-radius: 19px;
+    text-align: center;
+}
+.news:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.427)), url(../img/fete2.jpg);
+}
+.news > h2{
+    color: #ddd;
+    cursor: default;
+}
+.news > p{
+    color: white;
+    cursor: default;
+    margin: 2%;
+}
+.news > p > a{
+    color: rgb(247, 200, 242);
+    background-color: rgba(174, 173, 173, 0.331);
+    border-radius: 5px;
+    border: 2px solid rgba(174, 173, 173, 0.021);
+}
+.FAQ{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/FAQ1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+    border-radius: 19px;
+    text-align: center;
+}
+.FAQ:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.427)), url(../img/FAQ1.jpg);
+}
+.FAQ > h2{
+    color: #ddd;
+    cursor: default;
+}
+.FAQ > p{
+    color: white;
+    cursor: default;
+    margin: 2%;
+}
+.FAQ > p > a{
+    color: rgb(70, 126, 59);
+    background-color: #25252598;
+    border-radius: 5px;
+    border: 2px solid #25252500;
+}
+.hidden {
+    display: none;
+}
+#noResult{
+    display: none; 
+}

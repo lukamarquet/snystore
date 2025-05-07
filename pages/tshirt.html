@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title translate="no">Snystore</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title translate="no">Snystore - T-shirt</title>
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <link rel="icon" href="img/icon.jpg">
+    <link rel="icon" href="../img/icon.jpg">
 </head>
 <body>
-    <div class="container">
+    <div class="containe">
+        <!--
         <div class="solde">
             <div class="marquee">
               <div class="marquee-content" id="marquee-content">
@@ -16,44 +17,31 @@
             </div>
             <button onclick="sur('-50% ça ne se refuse pas...', 'Vous ne voulez plus etre informé des réductions ? Ok.')">✕</button>
           </div>
-          
+        -->
           
         <div class="header">
-            <h1 translate="no" id="titre" onclick="window.location.href='index.html'">SnyStore</h1>
-            <input type="search" id="searchInput" placeholder="Recherche">
-            <button id="shop" onclick="window.location.href='pages/shop.html'">🛒</button>   
+            <h1 translate="no" id="titre" onclick="window.location.href='../index.html'">SnyStore - T-shirt</h1>
+            <button id="shop" onclick="window.location.href='shop.html'">🛒</button>   
         </div>
 
         <div class="menu">
             <div class="ecrit">
-                <a href="pages/pullover.html">Pullover - (<span id="count-pullover">-</span>)</a>
+                <a href="../index.html">Home</a>
                 <br>
-                <a href="pages/tshirt.html">T-shirt - (<span id="count-t-shirt">-</span>)</a>
+                <a href="pullover.html">Pullover - (<span id="count-pullover">0</span>)</a>
                 <br>
-                <a href="pages/pantalon.html">Pantalon - (<span id="count-pantalon">-</span>)</a>
+                <a href="pantalon.html">Pantalon - (<span id="count-pantalon">0</span>)</a>
                 <br>
-                <a href="pages/chaussure.html">Chaussures - (<span id="count-chaussure">-</span>)</a>
+                <a href="chaussure.html">Chaussures - (<span id="count-chaussure">0</span>)</a>
                 <br>
-                <a href="pages/collection.html">Collections - (3)</a>
+                <a href="collection.html">Collections - (3)</a>
             </div>
         </div>
 
         <div class="content">
-            <div class="news">
-                <h2><u>-50% de remise en ce moment sur tous nos pulls !</u></h2>
-                <p>Profitez de l'offre jusqu'au XX/XX/XXXX. Sur toute notre collection de <a href="pages/pullover.html">pulls</a>.</p>
+            <h2 id="h2content">Tous nos t-shirts</h2>
+            <div class="wrapper">
             </div>
-            <br>
-            <div class="FAQ">
-                <h2><u>Qui sommes nous ?</u></h2>
-                <p>C'est vrai juste un projet de NSI... Mais aussi en réalité bien plus : nous sommes une révolution dans le monde de l'art visuel, de la mode et du style. D'ailleurs notre marque très valorisée, fournit des services de qualité, d'où notre compétition ardu avec de grandes maisons de coutures traditionnels comme LVMH ou Dior.</p>
-                <p>N'hésitez pas a visiter nos <a href="pages/collection.html">collections</a>.<br><strong>Info supplémentaire :</strong> bientôt la nouvelle collection Éte sera disponible.</p>
-            </div>
-            <br>
-            <h2 id="h2content">Nos suggestions pour vous - (<span id="count-total">-</span>)</h2>
-            <div class="wrapper2">
-            </div>
-            <p id="noResult">Aucun article trouvé.</p>
         </div>
         <div class="popup-overlay" id="popup">
             <div class="popup">
@@ -81,13 +69,13 @@
                 </div>
               </div>
             </div>
-        </div>     
+        </div>
         <div class="footer">
             <h4>SnyStore - The House of inovation.</h4><br>
         </div>
     </div>
-    <script src="../snystore/js/script.js"></script>
+    <script src="../js/script.js"></script>
     <script>number(articles)</script>
-    <script>loadData(articles)</script>
+    <script>loadDatatshirt(articles)</script>
 </body>
 </html>
