@@ -46,6 +46,25 @@
     margin: auto;
     font-size: 150%;
 }
+
+#profil {
+    grid-area: profil;
+    background-image: url(../img/pdp.png);
+    border: solid 1px #434343;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto 50% auto 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#profil:hover{
+    padding: 1px;
+    border: solid 2px #616161;
+}
+  
 #shop{
     grid-area: shop;
     background: none;
@@ -86,7 +105,7 @@
     height: max-content;
 }
 .article{
-    border: 1px solid gray;
+    border: solid 1px gray;
     cursor: pointer;
     border-radius: 10px;
     margin: 5% 1% 5% 1%;
