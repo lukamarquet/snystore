@@ -56,7 +56,8 @@ function number(list) {
         document.getElementById("count-total").textContent = total || 0;
 
     console.log(compteur);
-    console.log(total)
+    console.log(total);
+    console.log("lukamarquet")
 }
 
 
