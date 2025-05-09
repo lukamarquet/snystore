@@ -16,14 +16,14 @@
                 <span>-50% de remise sur tous les pulls !</span>
               </div>
             </div>
-            <button onclick="sur('-50% ça ne se refuse pas...', 'Vous ne voulez plus etre informé des réductions ? Ok.')">✕</button>
+            <button onclick="sur('-50% ça ne se refuse pas...', 'Vous ne voulez plus etre informé des réductions ? Ok.')" title="fermer">✕</button>
           </div>
         -->   
           
         <div class="header">
             <h1 translate="no" id="titre" onclick="window.location.href='../index.html'">SnyStore - Chaussures</h1>
 
-            <button id="shop" onclick="window.location.href='shop.html'">🛒</button>   
+            <button id="shop" onclick="window.location.href='shop.html'" title="panier">🛒</button>   
         </div>
 
         <div class="menu">
@@ -48,7 +48,7 @@
         </div>
         <div class="popup-overlay" id="popup">
             <div class="popup">
-              <span class="close-btn" onclick="closePopup()">✕</span>
+              <span class="close-btn" onclick="closePopup()" title="fermer">✕</span>
               <div class="popup-content">
                 <div class="img">
                     <img id="popup-image" src="" alt="Article">
