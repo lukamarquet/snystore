@@ -17,6 +17,7 @@ const buttons = document.getElementById("taillebuttons");
 const buttonl = document.getElementById("taillebuttonl");
 const buttonxl = document.getElementById("taillebuttonxl");
 const searchInput = document.getElementById("searchInput");
+console.log(buttonxs);
 const isSubPage = location.pathname.includes("/pages/");
 const prefix = isSubPage ? "../" : "";
 const articles = [
@@ -32,6 +33,50 @@ const articles = [
     {"titre": "slim bleu troué", "img": prefix +"img/slim.png","description": "Si t'es un vieux gitan qui aime le slim avec des troues et qui est plus a la mode.", "prix": 2, "solde": undefined, "dispo": true, "type": "pantalon"  },
     {"titre": "Botte Timberland Prenium", "img": prefix +"img/Timberland2.jpg","description": "Forcément si t'achète c'est que t'as du gout.", "prix": 210, "solde": undefined, "dispo": true, "type": "chaussure"  },
 ];
+
+document.addEventListener("click", (event) => {
+    if (event.target === buttonxs) {
+        buttonxs.classList.add("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "XS";
+        console.log(taille);
+    } else if (event.target === buttonm) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.add("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "M";
+        console.log(taille);
+    } else if (event.target === buttons) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.add("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "S";
+        console.log(taille);
+    } else if (event.target === buttonl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.add("active");
+        buttonxl.classList.remove("active");
+        taille = "L";
+        console.log(taille);
+    } else if (event.target === buttonxl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.add("active"); 
+        taille = "XL";
+        console.log(taille);
+    }
+});
 
 function number(list) {
     const compteur = {};
@@ -309,50 +354,6 @@ function sur(title, description) {
     document.getElementById("popup").style.display = "flex";
     document.querySelector('.solde').style.display = 'none';
 }
-
-document.addEventListener("click", (event) => {
-    if (event.target === buttonxs) {
-        buttonxs.classList.add("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "XS";
-        console.log(taille);
-    } else if (event.target === buttonm) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.add("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "M";
-        console.log(taille);
-    } else if (event.target === buttons) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.add("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "S";
-        console.log(taille);
-    } else if (event.target === buttonl) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.add("active");
-        buttonxl.classList.remove("active");
-        taille = "L";
-        console.log(taille);
-    } else if (event.target === buttonxl) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.add("active"); 
-        taille = "XL";
-        console.log(taille);
-    }
-});
 
 searchInput.addEventListener("input", () => {
     const searchValue = searchInput.value.toLowerCase();
