@@ -341,7 +341,7 @@ function addToCart() {
     const title = document.getElementById("popup-title").textContent;
     const price = document.getElementById("popup-price").textContent;
     const quantity = document.getElementById("popup-quantity").value;
-    const finalPrice = parseFloat(price) * parseInt(quantity);
+    const finalPrice = price * quantity;
     alert(`Ajouté au panier : ${quantity} x ${title} taille ${taille} (${finalPrice} €)`);
     closePopup();
 }
