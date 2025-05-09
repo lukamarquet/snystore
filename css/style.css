@@ -231,18 +231,18 @@
 .taille{
     cursor: default;
 }
-.taille button{
+.taille > .inactive{
     background-color: white;
     color: #333;
     border-radius: 5px;
     border: 2px solid #434343;
 }
-.taille button:hover{
+.inactive:hover{
     background-color: #434343;
     color: white;
 }
-.taille butto{
-    background-color: #ff0000;
+.taille > .active{
+    background-color: #434343;
     color: white;
     border-radius: 5px;
     border: 2px solid #434343;

@@ -5,18 +5,24 @@ if (marqueeContent) {
         marqueeContent.innerHTML += originalContent;
     }
 }
+let taille = "non déterminée";
 let numberpullover = 0;
 let numbertshirt = 0;
 let numberpantallon = 0;
 let numberchaussure = 0;
 let total = 0;
+const buttonxs = document.getElementById("taillebuttonxs");
+const buttonm = document.getElementById("taillebuttonm");
+const buttons = document.getElementById("taillebuttons");
+const buttonl = document.getElementById("taillebuttonl");
+const buttonxl = document.getElementById("taillebuttonxl");
 const searchInput = document.getElementById("searchInput");
 const isSubPage = location.pathname.includes("/pages/");
 const prefix = isSubPage ? "../" : "";
 const articles = [
     {"titre": "Nike Air Max", "img": prefix +"img/air_max.jpg","description": "Chaussures légères et confortables.", "prix": 60, "solde": "120 €", "dispo": true, "type": "chaussure"  },
     {"titre": "Adidas Stan Smith", "img": prefix +"img/stan.jpg", "description": "Classiques indémodables.", "prix": 95, "solde": undefined, "dispo": false, "type": "chaussure"  },
-    {"titre": "Super Sneakers", "img": prefix +"img/Super_Sneaker.webp", "description": "Les fameuses chaussures qui courent vite.", "prix": "1 000 000", "solde": undefined, "dispo": true, "type": "chaussure"  },
+    {"titre": "Super Sneakers", "img": prefix +"img/Super_Sneaker.webp", "description": "Les fameuses chaussures qui courent vite.", "prix": 1000000, "solde": undefined, "dispo": true, "type": "chaussure"  },
     {"titre": "Style peaky blinder", "img": prefix +"img/long.png", "description": "conçu pour perdre de l'aura (l'homme est vraiment fou), ⚠️TROP DISPONIBLE !!!⚠️", "prix": 0.00001, "solde": "1 €", "dispo": true, "type": "chaussure"  },
     {"titre": "Pull Minecraft", "img": prefix +"img/minecraft.jpg", "description": "Si t'a 35 ans et que tu joues toujours a minecraft ce pull est fait pour toi !", "prix": 20, "solde": "40 €", "dispo": true, "type": "pullover"  },
     {"titre": "T-shirt tour infernale", "img": prefix +"img/nul_tshirt.jpg", "description": "T'as la ref ? 🤓", "prix": 5, "solde": undefined, "dispo": true, "type": "t-shirt"  },
@@ -278,13 +284,20 @@ function openPopup(title, price, description, image, reduce) {
 
 function closePopup() {
     document.getElementById("popup").style.display = "none";
+    buttonxs.classList.remove("active");
+    buttonm.classList.remove("active");
+    buttons.classList.remove("active");
+    buttonl.classList.remove("active");
+    buttonxl.classList.remove("active");
+    taille = "non déterminée";
 }
 
 function addToCart() {
     const title = document.getElementById("popup-title").textContent;
     const price = document.getElementById("popup-price").textContent;
     const quantity = document.getElementById("popup-quantity").value;
-    alert(`Ajouté au panier : ${quantity} x ${title} (${price} €)`);
+    const finalPrice = parseFloat(price) * parseInt(quantity);
+    alert(`Ajouté au panier : ${quantity} x ${title} taille ${taille} (${finalPrice} €)`);
     closePopup();
 }
 
@@ -324,3 +337,41 @@ searchInput.addEventListener("input", () => {
     loadData(filteredArticles);
 });
 
+document.addEventListener("click", (event) => {
+    if (event.target === buttonxs) {
+        buttonxs.classList.add("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "XS";
+    } else if (event.target === buttonm) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.add("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "M";
+    } else if (event.target === buttons) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.add("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "S";
+    } else if (event.target === buttonl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.add("active");
+        buttonxl.classList.remove("active");
+        taille = "L";
+    } else if (event.target === buttonxl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.add("active"); 
+        taille = "XL";
+    }
+});
