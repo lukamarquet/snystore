@@ -231,6 +231,14 @@
 .taille{
     cursor: default;
 }
+.taille > button{
+    background-color: white;
+    color: #333;
+}
+.taille > button:hover{
+    background-color: #434343;
+    color: white;
+}
 .taille > .inactive{
     background-color: white;
     color: #333;

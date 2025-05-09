@@ -310,6 +310,50 @@ function sur(title, description) {
     document.querySelector('.solde').style.display = 'none';
 }
 
+document.addEventListener("click", (event) => {
+    if (event.target === buttonxs) {
+        buttonxs.classList.add("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "XS";
+        console.log(taille);
+    } else if (event.target === buttonm) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.add("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "M";
+        console.log(taille);
+    } else if (event.target === buttons) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.add("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.remove("active");
+        taille = "S";
+        console.log(taille);
+    } else if (event.target === buttonl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.add("active");
+        buttonxl.classList.remove("active");
+        taille = "L";
+        console.log(taille);
+    } else if (event.target === buttonxl) {
+        buttonxs.classList.remove("active");
+        buttonm.classList.remove("active");
+        buttons.classList.remove("active");
+        buttonl.classList.remove("active");
+        buttonxl.classList.add("active"); 
+        taille = "XL";
+        console.log(taille);
+    }
+});
+
 searchInput.addEventListener("input", () => {
     const searchValue = searchInput.value.toLowerCase();
 
@@ -335,43 +379,4 @@ searchInput.addEventListener("input", () => {
     }
 
     loadData(filteredArticles);
-});
-
-document.addEventListener("click", (event) => {
-    if (event.target === buttonxs) {
-        buttonxs.classList.add("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "XS";
-    } else if (event.target === buttonm) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.add("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "M";
-    } else if (event.target === buttons) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.add("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.remove("active");
-        taille = "S";
-    } else if (event.target === buttonl) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.add("active");
-        buttonxl.classList.remove("active");
-        taille = "L";
-    } else if (event.target === buttonxl) {
-        buttonxs.classList.remove("active");
-        buttonm.classList.remove("active");
-        buttons.classList.remove("active");
-        buttonl.classList.remove("active");
-        buttonxl.classList.add("active"); 
-        taille = "XL";
-    }
 });
