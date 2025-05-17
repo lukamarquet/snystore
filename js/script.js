@@ -5,6 +5,7 @@ if (marqueeContent) {
         marqueeContent.innerHTML += originalContent;
     }
 }
+
 let taille = "non déterminée";
 let numberpullover = 0;
 let numbertshirt = 0;
@@ -20,6 +21,7 @@ const searchInput = document.getElementById("searchInput");
 console.log(buttonxs);
 const isSubPage = location.pathname.includes("/pages/");
 const prefix = isSubPage ? "../" : "";
+
 const articles = [
     {"titre": "Nike Air Max", "img": prefix +"img/air_max.jpg","description": "Chaussures légères et confortables.", "prix": 60, "solde": "120 €", "dispo": true, "type": "chaussure"  },
     {"titre": "Adidas Stan Smith", "img": prefix +"img/stan.jpg", "description": "Classiques indémodables.", "prix": 95, "solde": undefined, "dispo": false, "type": "chaussure"  },
