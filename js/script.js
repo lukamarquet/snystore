@@ -25,12 +25,12 @@ const articles = [
     {"titre": "Adidas Stan Smith", "img": prefix +"img/stan.jpg", "description": "Classiques indémodables.", "prix": 95, "solde": undefined, "dispo": false, "type": "chaussure"  },
     {"titre": "Super Sneakers", "img": prefix +"img/Super_Sneaker.webp", "description": "Les fameuses chaussures qui courent vite.", "prix": 1000000, "solde": undefined, "dispo": true, "type": "chaussure"  },
     {"titre": "Style peaky blinder", "img": prefix +"img/long.png", "description": "conçu pour perdre de l'aura (l'homme est vraiment fou), ⚠️TROP DISPONIBLE !!!⚠️", "prix": 0.00001, "solde": "1 €", "dispo": true, "type": "chaussure"  },
-    {"titre": "Pull Minecraft", "img": prefix +"img/minecraft.jpg", "description": "Si t'a 35 ans et que tu joues toujours a minecraft ce pull est fait pour toi !", "prix": 20, "solde": "40 €", "dispo": true, "type": "pullover"  },
+    {"titre": "Pull Minecraft", "img": prefix +"img/minecraft.jpg", "description": "Si tu joues a minecraft ce pull est fait pour toi !", "prix": 20, "solde": "40 €", "dispo": true, "type": "pullover"  },
     {"titre": "T-shirt tour infernale", "img": prefix +"img/nul_tshirt.jpg", "description": "T'as la ref ? 🤓", "prix": 5, "solde": undefined, "dispo": true, "type": "t-shirt"  },
     {"titre": "Baggy bleu", "img": prefix +"img/baggy.png","description": "Large pour les hunters.", "prix": 47, "solde": undefined, "dispo": true, "type": "pantalon"  },
     {"titre": "Pantalon large noir", "img": prefix +"img/large.png","description": "Large et beau pour pécho.", "prix": 49, "solde": undefined, "dispo": true, "type": "pantalon"  },
     {"titre": "Super baggy noir", "img": prefix +"img/superbaggy.png","description": "Baggy super large.", "prix": 51, "solde": undefined, "dispo": true, "type": "pantalon"  },
-    {"titre": "slim bleu troué", "img": prefix +"img/slim.png","description": "Si t'es un vieux gitan qui aime le slim avec des troues et qui est plus a la mode.", "prix": 2, "solde": undefined, "dispo": true, "type": "pantalon"  },
+    {"titre": "slim bleu troué", "img": prefix +"img/slim.png","description": "Si t'aimes les slims avec des troues", "prix": 2, "solde": undefined, "dispo": true, "type": "pantalon"  },
     {"titre": "Botte Timberland Prenium", "img": prefix +"img/Timberland2.jpg","description": "Forcément si t'achète c'est que t'as du gout.", "prix": 210, "solde": undefined, "dispo": true, "type": "chaussure"  },
 ];
 
